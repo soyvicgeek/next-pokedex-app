@@ -1,10 +1,13 @@
 import { FC } from 'react'
 import Head from 'next/head'
+
 import { Navbar } from '../ui'
 
 interface Props {
   title?: string
 }
+
+const origin = typeof window === 'undefined' ? '' : window.location.origin
 
 export const Layout: FC<Props> = ({ children, title }) => {
   return (
@@ -17,7 +20,13 @@ export const Layout: FC<Props> = ({ children, title }) => {
           content={`Información sobre el Pokémon ${title}`}
         />
         <meta name="keywords" content={`${title}, pokémon, pokedex`} />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+        <meta property="og:title" content={`Información sobre ${title}`} />
+        <meta
+          property="og:description"
+          content={`Esta es la página sobre ${title}`}
+        />
+        <meta property="og:image" content={`${origin}/img/pokemon-home.jpg`} />
       </Head>
 
       <Navbar />
