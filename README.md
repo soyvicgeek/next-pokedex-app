@@ -23,6 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Búsqueda de Pokémon en la URL por medio de id (getStaticProps y getStaticPaths)
 - Búsqueda de Pokémon en la URL por medio de nombre (getStaticProps y getStaticPaths)
 - Open Graph Meta Tags para SEO
+- Uso del "Incremental Static Regeneration (ISG)"
 
 [![IMAGE ALT TEXT](https://i.ibb.co/PYYVBZW/pokemon-home.jpg)](https://github.com/soyvicgeek 'Pokédex Home')
 
